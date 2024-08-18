@@ -1,0 +1,151 @@
+### create user
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "nama": "alfi Admin2",
+    "email": "admin2@gmail.com",
+    "password": "Alfiaditya12@",
+    "confPassword": "Alfiaditya12@",
+    "role": "Admin"
+}
+
+### GET ALL USER
+GET http://localhost:5000/users
+
+### GET USER BY ID
+GET http://localhost:5000/users/9b8ac911-cffa-4539-80c2-483bda89333a
+
+
+### UPDATE USER
+PATCH  http://localhost:5000/users/4660d02d-900a-4282-8c56-3a4964ae9132
+Content-Type: application/json
+
+{
+    "nama": "alfi Admin",
+    "email": "admin@gmail.com",
+    "password": "Alfiaditya12@",
+    "confPassword": "Alfiaditya12@",
+    "role": "Admin",
+    "statusPengguna": "sudah ter-verifikasi"
+}
+
+### DELETE USER
+DELETE http://localhost:5000/users/9b8ac911-cffa-4539-80c2-483bda89333a
+
+### LOGIN
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "Alfiaditya12@"
+}
+### LOGIN
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "peternak@gmail.com",
+    "password": "Alfiaditya12@"
+}
+
+### LOGIN
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "hahaha@gmail.com",
+    "password": "Alfiaditya1125@"
+}
+
+
+### GET PROFILE
+GET http://localhost:5000/me
+
+### LOGOUT
+DELETE  http://localhost:5000/logout
+
+
+### edit user
+PATCH  http://localhost:5000/users/b3ecfcb5-de27-4cc4-849d-26dc2820d2e7
+Content-Type: application/json
+
+{
+    
+    "nama": "zufar",
+    "email": "zufar@gmail.com",
+    "password": "Alfiaditya12@",
+    "confPassword": "Alfiaditya12@",
+    "role": "peternak",
+    "statusPengguna": "sudah ter-verifikasi"
+}
+
+
+### GET ALL PRODUCT
+GET http://localhost:5000/sapi
+
+### GET Single PRODUCT
+GET http://localhost:5000/products/975b5069-2d6d-49f9-aa31-1b697a1d9559
+
+### GET DELETE PRODUCT
+DELETE http://localhost:5000/products/2ea01cdb-afdd-45d2-ba93-d2dc365e7a60
+
+### GET Confirm vaksin
+PATCH  http://localhost:5000/sapi/cc05c778-6626-45d3-93b9-b530964b8bfa
+Content-Type: application/json
+
+{
+  "earTag": "1",
+  "beratSekarang": 120.5,
+  "waktuPembaruan": "2024-06-09T12:00:00Z",
+  "umurSekarang": "2,5 tahun",
+  "konfirmasiVaksinasi": "True",
+  "konfirmasiVaksinasiUpdatedAt": "2024-06-09T12:00:00Z",
+  "konfirmasiKelayakan": "True",
+  "konfirmasiKelayakanUpdatedAt": "2024-06-09T12:00:00Z"
+}
+
+
+### UPDATE DATA
+PATCH  http://localhost:5000/products/d8955b46-c5e5-44c5-a4e1-3e57c3c37a4a
+Content-Type: application/json
+
+{
+    "earTag": "5",
+    "jenisSapi": "PALISON",
+    "tanggalMasuk": "2021-01-04",
+    "beratAwal": 100,
+    "beratAkhir": 150
+}
+
+
+###
+POST http://localhost:5000/simpan
+Content-Type: application/json
+
+{
+    "earTag": "1",
+    "umurMasuk": "2", 
+    "jenisSapi": "PALISON",
+    "tanggalMasuk": "2021-01-04",
+    "beratAwal": "100",
+    "beratSekarang": "150",
+    "umurSekarang": "3",  
+    "waktuPembaruan": "2022-01-04T00:00:00Z",
+    "konfirmasiVaksinasi": "Belum dikonfirmasi",
+    "konfirmasiVaksinasiUpdatedAt": "2021-06-01",
+    "konfirmasiKelayakan": "Belum dikonfirmasi",
+    "konfirmasiKelayakanUpdatedAt": "2022-01-04",
+    "arsipSapi": "arsip_sapi_123",
+    "arsipSertifikat": "arsip_sertifikat_123"
+}
+
+
+###
+GET http://localhost:5000/TernakSapi
+Content-Type: application/json
+
+###
+GET http://localhost:5000/TernakSapi/0_0
+Content-Type: application/json

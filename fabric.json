@@ -1,0 +1,71 @@
+ {
+				"name": "fablo-test-network-peternak",
+				"version": "1.0.0",
+				"client": {
+					"organization": "Peternak",
+					"connection": {
+						"timeout": {
+							"peer": {
+								"endorser": "500"
+							}
+						}
+					}
+				},
+				"organization": {
+					"Peternak": {
+						"mspid": "PeternakMSP",
+						"peers": [
+							"peer0.peternak.peternakan.com",
+							"peer0.admin.peternakan.com",
+							"peer0.dkpp.peternakan.com"
+						],
+						"certificateAuthorities": [
+							"ca.peternak.peternakan.com"
+						]
+					}
+				},
+				"peers": {
+					"peer0.peternak.peternakan.com": {
+						"url": "grpc://localhost:7041",
+						"tlsCACerts": {
+							"pem": "-----BEGIN CERTIFICATE-----\nMIICdTCCAhygAwIBAgIRAI3I5PkvYfV2d0eLTwPNR6AwCgYIKoZIzj0EAwIwgYQx\nCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4g\nRnJhbmNpc2NvMSAwHgYDVQQKExdwZXRlcm5hay5wZXRlcm5ha2FuLmNvbTEmMCQG\nA1UEAxMddGxzY2EucGV0ZXJuYWsucGV0ZXJuYWthbi5jb20wHhcNMjQwODE3MTcz\nNDAwWhcNMzQwODE1MTczNDAwWjCBhDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNh\nbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBGcmFuY2lzY28xIDAeBgNVBAoTF3BldGVy\nbmFrLnBldGVybmFrYW4uY29tMSYwJAYDVQQDEx10bHNjYS5wZXRlcm5hay5wZXRl\ncm5ha2FuLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABAsxW+bM74OCFq5E\n3JFqoENpWuIPpYqe90GSe7275Q5aJLe1AILyJCfbY6YSFZqesNEr7xFAOG0er5u1\ncY/cov2jbTBrMA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAgYI\nKwYBBQUHAwEwDwYDVR0TAQH/BAUwAwEB/zApBgNVHQ4EIgQgONPVgfq/+z+VbGh+\ncqqFTaHhML8i1feKteknFSN8wBkwCgYIKoZIzj0EAwIDRwAwRAIgPosnCn1beFdQ\nRpzeWXlcXTtJ8VvByz4gGXu0DUfBY5ECIEpUFLWqdRfAysM/sZKRi4Yk7SO9JDpf\n5+Hm5rqaiEBU\n-----END CERTIFICATE-----\n"
+						},
+						"grpcOptions": {
+							"ssl-target-name-override": "peer0.peternak.peternakan.com",
+							"hostnameOverride": "peer0.peternak.peternakan.com"
+						}
+					},
+					"peer0.admin.peternakan.com": {
+						"url": "grpc://localhost:7061",
+						"tlsCACerts": {
+							"pem": "-----BEGIN CERTIFICATE-----\nMIICdTCCAhygAwIBAgIRAI3I5PkvYfV2d0eLTwPNR6AwCgYIKoZIzj0EAwIwgYQx\nCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4g\nRnJhbmNpc2NvMSAwHgYDVQQKExdwZXRlcm5hay5wZXRlcm5ha2FuLmNvbTEmMCQG\nA1UEAxMddGxzY2EucGV0ZXJuYWsucGV0ZXJuYWthbi5jb20wHhcNMjQwODE3MTcz\nNDAwWhcNMzQwODE1MTczNDAwWjCBhDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNh\nbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBGcmFuY2lzY28xIDAeBgNVBAoTF3BldGVy\nbmFrLnBldGVybmFrYW4uY29tMSYwJAYDVQQDEx10bHNjYS5wZXRlcm5hay5wZXRl\ncm5ha2FuLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABAsxW+bM74OCFq5E\n3JFqoENpWuIPpYqe90GSe7275Q5aJLe1AILyJCfbY6YSFZqesNEr7xFAOG0er5u1\ncY/cov2jbTBrMA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAgYI\nKwYBBQUHAwEwDwYDVR0TAQH/BAUwAwEB/zApBgNVHQ4EIgQgONPVgfq/+z+VbGh+\ncqqFTaHhML8i1feKteknFSN8wBkwCgYIKoZIzj0EAwIDRwAwRAIgPosnCn1beFdQ\nRpzeWXlcXTtJ8VvByz4gGXu0DUfBY5ECIEpUFLWqdRfAysM/sZKRi4Yk7SO9JDpf\n5+Hm5rqaiEBU\n-----END CERTIFICATE-----\n"
+						},
+						"grpcOptions": {
+							"ssl-target-name-override": "peer0.admin.peternakan.com",
+							"hostnameOverride": "peer0.admin.peternakan.com"
+						}
+					},
+					"peer0.dkpp.peternakan.com": {
+						"url": "grpc://localhost:7081",
+						"tlsCACerts": {
+							"pem": "-----BEGIN CERTIFICATE-----\nMIICdTCCAhygAwIBAgIRAI3I5PkvYfV2d0eLTwPNR6AwCgYIKoZIzj0EAwIwgYQx\nCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4g\nRnJhbmNpc2NvMSAwHgYDVQQKExdwZXRlcm5hay5wZXRlcm5ha2FuLmNvbTEmMCQG\nA1UEAxMddGxzY2EucGV0ZXJuYWsucGV0ZXJuYWthbi5jb20wHhcNMjQwODE3MTcz\nNDAwWhcNMzQwODE1MTczNDAwWjCBhDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNh\nbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBGcmFuY2lzY28xIDAeBgNVBAoTF3BldGVy\nbmFrLnBldGVybmFrYW4uY29tMSYwJAYDVQQDEx10bHNjYS5wZXRlcm5hay5wZXRl\ncm5ha2FuLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABAsxW+bM74OCFq5E\n3JFqoENpWuIPpYqe90GSe7275Q5aJLe1AILyJCfbY6YSFZqesNEr7xFAOG0er5u1\ncY/cov2jbTBrMA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAgYI\nKwYBBQUHAwEwDwYDVR0TAQH/BAUwAwEB/zApBgNVHQ4EIgQgONPVgfq/+z+VbGh+\ncqqFTaHhML8i1feKteknFSN8wBkwCgYIKoZIzj0EAwIDRwAwRAIgPosnCn1beFdQ\nRpzeWXlcXTtJ8VvByz4gGXu0DUfBY5ECIEpUFLWqdRfAysM/sZKRi4Yk7SO9JDpf\n5+Hm5rqaiEBU\n-----END CERTIFICATE-----\n"
+						},
+						"grpcOptions": {
+							"ssl-target-name-override": "peer0.dkpp.peternakan.com",
+							"hostnameOverride": "peer0.dkpp.peternakan.com"
+						}
+					}
+				},
+				"certificateAuthorities": {
+					"ca.peternak.peternakan.com": {
+						"url": "http://localhost:7040",
+						"caName": "ca.peternak.peternakan.com",
+						"httpOptions": {
+							"verify": false
+						},
+						"tlsCACerts": {
+							"pem": "-----BEGIN CERTIFICATE-----\nMIICdTCCAhygAwIBAgIRAI3I5PkvYfV2d0eLTwPNR6AwCgYIKoZIzj0EAwIwgYQx\nCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4g\nRnJhbmNpc2NvMSAwHgYDVQQKExdwZXRlcm5hay5wZXRlcm5ha2FuLmNvbTEmMCQG\nA1UEAxMddGxzY2EucGV0ZXJuYWsucGV0ZXJuYWthbi5jb20wHhcNMjQwODE3MTcz\nNDAwWhcNMzQwODE1MTczNDAwWjCBhDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNh\nbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBGcmFuY2lzY28xIDAeBgNVBAoTF3BldGVy\nbmFrLnBldGVybmFrYW4uY29tMSYwJAYDVQQDEx10bHNjYS5wZXRlcm5hay5wZXRl\ncm5ha2FuLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABAsxW+bM74OCFq5E\n3JFqoENpWuIPpYqe90GSe7275Q5aJLe1AILyJCfbY6YSFZqesNEr7xFAOG0er5u1\ncY/cov2jbTBrMA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAgYI\nKwYBBQUHAwEwDwYDVR0TAQH/BAUwAwEB/zApBgNVHQ4EIgQgONPVgfq/+z+VbGh+\ncqqFTaHhML8i1feKteknFSN8wBkwCgYIKoZIzj0EAwIDRwAwRAIgPosnCn1beFdQ\nRpzeWXlcXTtJ8VvByz4gGXu0DUfBY5ECIEpUFLWqdRfAysM/sZKRi4Yk7SO9JDpf\n5+Hm5rqaiEBU\n-----END CERTIFICATE-----\n"
+						}
+					}
+				}
+			}
