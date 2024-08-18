@@ -17,9 +17,9 @@ const sessionStorage = SequelizeStore(session.Store);
 const store = new sessionStorage({
   db: db,
 });
-// (async () => {
-//     await db.sync();
-// })();
+(async () => {
+    await db.sync();
+})();
 
 app.use(session({
     secret: process.env.SESS_SECRET,
@@ -47,7 +47,7 @@ app.use((req, res, next) => {
     next();
   });
   
-// store.sync();
+store.sync();
 
 app.listen(process.env.APP_PORT, () => {
     console.log(`server berjalan dengan aman`);
