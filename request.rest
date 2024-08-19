@@ -1,5 +1,5 @@
 ### create user
-POST https://fabric-ternak-backend.my.too/register
+POST https://fabric-ternak-backend.my.to/register
 Content-Type: application/json
 
 {
@@ -11,14 +11,14 @@ Content-Type: application/json
 }
 
 ### GET ALL USER
-GET https://fabric-ternak-backend.my.too/users
+GET https://fabric-ternak-backend.my.to/users
 
 ### GET USER BY ID
-GET https://fabric-ternak-backend.my.too/users/9b8ac911-cffa-4539-80c2-483bda89333a
+GET https://fabric-ternak-backend.my.to/users/9b8ac911-cffa-4539-80c2-483bda89333a
 
 
 ### UPDATE USER
-PATCH  https://fabric-ternak-backend.my.too/users/4660d02d-900a-4282-8c56-3a4964ae9132
+PATCH  https://fabric-ternak-backend.my.to/users/4660d02d-900a-4282-8c56-3a4964ae9132
 Content-Type: application/json
 
 {
@@ -31,10 +31,10 @@ Content-Type: application/json
 }
 
 ### DELETE USER
-DELETE https://fabric-ternak-backend.my.too/users/9b8ac911-cffa-4539-80c2-483bda89333a
+DELETE https://fabric-ternak-backend.my.to/users/9b8ac911-cffa-4539-80c2-483bda89333a
 
 ### LOGIN
-POST https://fabric-ternak-backend.my.too/login
+POST https://fabric-ternak-backend.my.to/login
 Content-Type: application/json
 
 {
@@ -42,7 +42,7 @@ Content-Type: application/json
     "password": "Alfiaditya12@"
 }
 ### LOGIN
-POST https://fabric-ternak-backend.my.too/login
+POST https://fabric-ternak-backend.my.to/login
 Content-Type: application/json
 
 {
@@ -51,7 +51,7 @@ Content-Type: application/json
 }
 
 ### LOGIN
-POST https://fabric-ternak-backend.my.too/login
+POST https://fabric-ternak-backend.my.to/login
 Content-Type: application/json
 
 {
@@ -61,14 +61,14 @@ Content-Type: application/json
 
 
 ### GET PROFILE
-GET https://fabric-ternak-backend.my.too/me
+GET https://fabric-ternak-backend.my.to/me
 
 ### LOGOUT
-DELETE  https://fabric-ternak-backend.my.too/logout
+DELETE  https://fabric-ternak-backend.my.to/logout
 
 
 ### edit user
-PATCH  https://fabric-ternak-backend.my.too/users/b3ecfcb5-de27-4cc4-849d-26dc2820d2e7
+PATCH  https://fabric-ternak-backend.my.to/users/b3ecfcb5-de27-4cc4-849d-26dc2820d2e7
 Content-Type: application/json
 
 {
@@ -83,16 +83,16 @@ Content-Type: application/json
 
 
 ### GET ALL PRODUCT
-GET https://fabric-ternak-backend.my.too/sapi
+GET https://fabric-ternak-backend.my.to/sapi
 
 ### GET Single PRODUCT
-GET https://fabric-ternak-backend.my.too/products/975b5069-2d6d-49f9-aa31-1b697a1d9559
+GET https://fabric-ternak-backend.my.to/products/975b5069-2d6d-49f9-aa31-1b697a1d9559
 
 ### GET DELETE PRODUCT
-DELETE https://fabric-ternak-backend.my.too/products/2ea01cdb-afdd-45d2-ba93-d2dc365e7a60
+DELETE https://fabric-ternak-backend.my.to/products/2ea01cdb-afdd-45d2-ba93-d2dc365e7a60
 
 ### GET Confirm vaksin
-PATCH  https://fabric-ternak-backend.my.too/sapi/cc05c778-6626-45d3-93b9-b530964b8bfa
+PATCH  https://fabric-ternak-backend.my.to/sapi/cc05c778-6626-45d3-93b9-b530964b8bfa
 Content-Type: application/json
 
 {
@@ -108,7 +108,7 @@ Content-Type: application/json
 
 
 ### UPDATE DATA
-PATCH  https://fabric-ternak-backend.my.too/products/d8955b46-c5e5-44c5-a4e1-3e57c3c37a4a
+PATCH  https://fabric-ternak-backend.my.to/products/d8955b46-c5e5-44c5-a4e1-3e57c3c37a4a
 Content-Type: application/json
 
 {
@@ -121,7 +121,7 @@ Content-Type: application/json
 
 
 ###
-POST https://fabric-ternak-backend.my.too/simpan
+POST https://fabric-ternak-backend.my.to/simpan
 Content-Type: application/json
 
 {
@@ -143,9 +143,9 @@ Content-Type: application/json
 
 
 ###
-GET https://fabric-ternak-backend.my.too/TernakSapi
+GET https://fabric-ternak-backend.my.to/TernakSapi
 Content-Type: application/json
 
 ###
-GET https://fabric-ternak-backend.my.too/TernakSapi/0_0
+GET https://fabric-ternak-backend.my.to/TernakSapi/0_0
 Content-Type: application/json
