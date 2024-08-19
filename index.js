@@ -33,7 +33,7 @@ app.use(session({
 
 app.use(cors({
     credentials: true,
-    origin: ["http://fabric-ternak.my.to"]
+    origin: ["https://fabric-ternak.my.to"]
 }));
 app.use(express.json());
 app.use(UserRoute);
