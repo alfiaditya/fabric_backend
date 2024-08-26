@@ -1,5 +1,6 @@
 import Sapi from "../models/SapiModel.js";
 import Users from "../models/UserModel.js";
+import transporter from "../middleware/emailConfig.js";
 import { Op } from "sequelize";
 export const getSapi = async (req, res) => {
     try {
@@ -64,14 +65,12 @@ export const getSapiById = async (req, res) => {
 export const createSapi = async (req, res) => {
     try {
         const { earTag, jenisSapi, tanggalMasuk, beratAwal, umurMasuk, arsipSapi } = req.body;
-        
-   
+
         const existingSapi = await Sapi.findOne({ where: { earTag: earTag } });
         if (existingSapi) {
             return res.status(400).json({ msg: "EarTag sudah digunakan" });
         }
 
-        console.log('Data yang diterima:', req.body);
         const newSapi = await Sapi.create({
             earTag: earTag,
             jenisSapi: jenisSapi,
@@ -81,12 +80,35 @@ export const createSapi = async (req, res) => {
             arsipSapi: arsipSapi,
             userId: req.userId
         });
+
+
+        const users = await Users.findAll({
+            attributes: ['email']
+        });
+
+        const emailRecipients = users.map(user => user.email).join(', ');
+
+
+        const mailOptions = {
+            from: 'fabricternak@gmail.com', 
+            to: emailRecipients,
+            subject: 'Data Sapi Baru Telah Ditambahkan',
+            text: `Data sapi baru dengan EarTag ${newSapi.earTag} telah ditambahkan ke sistem oleh peternak.`
+        };
+
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                console.log('Error saat mengirim email:', error);
+            } else {
+                console.log('Email berhasil dikirim:', info.response);
+            }
+        });
+
         res.status(200).json({ msg: "Data sapi berhasil ditambahkan", data: newSapi });
     } catch (error) {
         res.status(500).json({ msg: error.message });
     }
 };
-
 
 export const updateSapi = async (req, res) => {
     try {
