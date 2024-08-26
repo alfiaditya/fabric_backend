@@ -5,7 +5,7 @@ const transporter = nodemailer.createTransport({
     service: 'gmail', // Anda bisa mengganti ini dengan layanan email lain atau menggunakan konfigurasi SMTP custom
     auth: {
         user: 'fabricternak@gmail.com', // Ganti dengan email pengirim
-        pass: 'Alfiaditya1125@' // Ganti dengan password atau app-specific password
+        pass: 'qvjn zwjk izjb ivqk' 
     }
 });
 
