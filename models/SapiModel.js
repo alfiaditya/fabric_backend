@@ -36,16 +36,22 @@ const Sapi = db.define('sapi', {
         }
     },
     beratAwal: {
-        type: DataTypes.STRING,
+        type: DataTypes.FLOAT,
         allowNull: false,
         validate: {
             notEmpty: true,
-            isValidFormat(value) {
-                const regex = /^\d+\s*KG$/i;
-                if (!regex.test(value)) {
-                    throw new Error('Berat harus dalam format "X KG"');
-                }
+            isFloat: true
+        },
+        get() {
+            const value = this.getDataValue('beratAwal');
+            return value ? `${value} KG` : null;
+        },
+        set(value) {
+            const numericValue = parseFloat(value);
+            if (isNaN(numericValue)) {
+                throw new Error('Berat harus berupa angka yang valid');
             }
+            this.setDataValue('beratAwal', numericValue);
         }
     },
     arsipSapi: {
@@ -53,44 +59,61 @@ const Sapi = db.define('sapi', {
         allowNull: true,
     },
     umurMasuk: {
-        type: DataTypes.STRING,
+        type: DataTypes.FLOAT,
         allowNull: false,
         validate: {
             notEmpty: true,
-            isValidFormat(value) {
-                const regex = /^\d+,\d{1,2} tahun$/;
-                if (!regex.test(value)) {
-                    throw new Error('Umur harus dalam format "X,XX tahun"');
-                }
+            isFloat: true
+        },
+        get() {
+            const value = this.getDataValue('umurMasuk');
+            return value ? `${value.toFixed(2)} Tahun` : null;
+        },
+        set(value) {
+            const numericValue = parseFloat(value.replace(',', '.'));
+            if (isNaN(numericValue)) {
+                throw new Error('Umur harus berupa angka yang valid');
             }
+            this.setDataValue('umurMasuk', numericValue);
         }
     },
     beratSekarang: {
-        type: DataTypes.STRING,
+        type: DataTypes.FLOAT,
         allowNull: true,
         validate: {
-            notEmpty: true,
-            isValidFormat(value) {
-                if (value !== null && value !== undefined) {
-                    const regex = /^\d+\s*KG$/i;
-                    if (!regex.test(value)) {
-                        throw new Error('Berat harus dalam format "X KG"');
-                    }
+            isFloat: true
+        },
+        get() {
+            const value = this.getDataValue('beratSekarang');
+            return value ? `${value} KG` : null;
+        },
+        set(value) {
+            if (value !== null && value !== undefined) {
+                const numericValue = parseFloat(value);
+                if (isNaN(numericValue)) {
+                    throw new Error('Berat harus berupa angka yang valid');
                 }
+                this.setDataValue('beratSekarang', numericValue);
             }
         }
     },
     umurSekarang: {
-        type: DataTypes.STRING,
+        type: DataTypes.FLOAT,
         allowNull: true,
         validate: {
-            isValidFormat(value) {
-                if (value !== null && value !== undefined) {
-                    const regex = /^\d+,\d{1,2} tahun$/;
-                    if (!regex.test(value)) {
-                        throw new Error('Umur harus dalam format "X,XX tahun"');
-                    }
+            isFloat: true
+        },
+        get() {
+            const value = this.getDataValue('umurSekarang');
+            return value ? `${value.toFixed(2)} Tahun` : null;
+        },
+        set(value) {
+            if (value !== null && value !== undefined) {
+                const numericValue = parseFloat(value.replace(',', '.'));
+                if (isNaN(numericValue)) {
+                    throw new Error('Umur harus berupa angka yang valid');
                 }
+                this.setDataValue('umurSekarang', numericValue);
             }
         }
     },
@@ -149,6 +172,7 @@ const Sapi = db.define('sapi', {
         }
     }
 });
+
 
 Users.hasMany(Sapi);
 Sapi.belongsTo(Users, { foreignKey: 'userId' });
