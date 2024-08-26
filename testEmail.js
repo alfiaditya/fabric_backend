@@ -2,7 +2,9 @@ import nodemailer from 'nodemailer';
 
 // Konfigurasi transporter untuk mengirim email menggunakan Gmail
 const transporter = nodemailer.createTransport({
-    service: 'gmail', // Anda bisa mengganti ini dengan layanan email lain atau menggunakan konfigurasi SMTP custom
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, // true for 465, false for other ports Anda bisa mengganti ini dengan layanan email lain atau menggunakan konfigurasi SMTP custom
     auth: {
         user: 'fabricternak@gmail.com', // Ganti dengan email pengirim
         pass: 'qvjn zwjk izjb ivqk' 
